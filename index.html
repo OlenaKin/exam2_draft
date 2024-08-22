@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header__container">
+        <a href="#"
+          ><img src="assets/Logo.svg" alt="logo picture" class="header__logo"
+        /></a>
+        <nav>
+          <input type="checkbox" id="check" class="header__burger-input" />
+          <ul class="header__nav-list">
+            <li class="header__nav-listItem"><a href="#">about us</a></li>
+            <li class="header__nav-listItem"><a href="#">projects</a></li>
+            <li class="header__nav-listItem"><a href="#">news</a></li>
+            <li class="header__nav-listItem"><a href="#">contact</a></li>
+          </ul>
+          <div class="header__social-network">
+            <img
+              src="./assets/social3.svg"
+              alt="facebook"
+              class="header__social-network-item"
+            />
+            <img
+              src="./assets/social2.svg"
+              alt="twitter"
+              class="header__social-network-item"
+            />
+            <img
+              src="./assets/social1.svg"
+              alt="instagram"
+              class="header__social-network-item"
+            />
+          </div>
+        </nav>
+        <label for="check" class="header__label-burger">
+          <img src="./menu.svg" alt="menu" />
+        </label>
+      </div>
+    </header>
+    <main>
+      <section>
+        <div class="main__first-block">
+          <div class="main__text-slider">
+            <div class="main__mySlides">
+              <h1>Simple & modern</h1>
+              <h2>We make the world beautiful every day</h2>
+            </div>
+            <div class="main__mySlides">
+              <h1>Comfortable & exquisit</h1>
+              <h2>Cities becom prittier with us</h2>
+            </div>
+            <div class="main__mySlides">
+              <h1>Stunnung & practical</h1>
+              <h2>We advocate beauty and simplicity</h2>
+            </div>
+          </div>
+          <div class="sidebar">
+            <button class="dot" onclick="currentSlide(1)"></button>
+            <button class="dot" onclick="currentSlide(2)"></button>
+            <button class="dot" onclick="currentSlide(3)"></button>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="main__second-block">
+          <div class="second-block__photoArea">
+            <div class="second-block__blueSquare"></div>
+            <div class="second-block__photo">
+              <img src="./assets/joel-filipe-151697 1.png" alt="architecture" />
+            </div>
+          </div>
+          <div class="second-block__textArea">
+            <div class="second-block__text">
+              <h2>One world</h2>
+              <h3>Trade center</h3>
+              <p>
+                Increasing prosperity in our lives can be accomplished by having
+                the right frame of mind. The truth is, our thoughts are very
+                powerful.
+              </p>
+              <button class="main__more-detail-button">more detail</button>
+              <h4>New York City, United States - 1776 feet</h4>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="main__third-block">
+          <div class="third-block__textArea">
+            <div class="third-block__text">
+              <h2>INTERNATIONAL</h2>
+              <h3>COMMERCE CENTRE</h3>
+              <p>
+                Successful businesses have many things in common, today we’ll
+                look at the big ‘R’ of recognition and how a digital advertising
+                network may help.
+              </p>
+              <button class="main__more-detail-button">more detail</button>
+              <h4>Hong Kong - 1588 feet</h4>
+            </div>
+          </div>
+          <div class="third-block__photoArea">
+            <div class="third-block__blueSquare"></div>
+            <div class="third-block__photo">
+              <img
+                src="./assets/photos-1284iH4Hjf4mhNgW 1.png"
+                alt="architecture"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="main__forth-block">
+          <div class="devision-white"></div>
+          <h3>latest news</h3>
+          <div class="forth-block_mySlides">
+          <div class="forth-block__cardSlide">
+            <div class="forth-block__card">
+              <img src="./assets/forthBlock_slide1.jpg" alt="background" />
+              <div class="card__text">
+                <h2>SEE THE UNMATCHED BEAUTY OF THE GREAT.</h2>
+                <p>
+                  Free directories: directories are perfect for customers that
+                  are searching for...
+                </p>
+                <p>ALJA BRUN</p>
+                <h5>20 Jan 2020</h5>
+              </div>
+            </div>
+            
+
+            <div class="forth-block__card">
+              <img src="./assets/forthBlock_slide2.png" alt="background" />
+              <div class="card__text">
+                <h2>EFFECTIVE ADVERTISING POINTERS.</h2>
+                <p>
+                  Having a home based business is a wonderful asset to your
+                  life...
+                </p>
+                <p>DOMINIC FREEMAN</p>
+                <h5>13 Dec 2019</h5>
+              </div>
+            </div>
+
+            <div class="forth-block__card">
+              <img src="./assets/forthBlock_slide3.png" alt="background" />
+              <div class="card__text">
+                <h2>HYPNOTIZE YOURSELF INTO THE GHOST.</h2>
+                <p>
+                  There are many things that are important to catalog design...
+                </p>
+                <p>ALICE WARD</p>
+                <h5>30 Nov 2019</h5>
+              </div>
+            </div>
+            </div>
+            <div class="forth-block__cardSlide">
+            <div class="forth-block__card">
+              <img src="./assets/forthBlock_slide1.jpg" alt="background" />
+              <div class="card__text">
+                <h2>SEE THE UNMATCHED BEAUTY OF THE GREAT.</h2>
+                <p>
+                  Free directories: directories are perfect for customers that
+                  are searching for...
+                </p>
+                <p>ALJA BRUN</p>
+                <h5>20 Jan 2020</h5>
+              </div>
+            </div>
+
+            <div class="forth-block__card">
+              <img src="./assets/forthBlock_slide2.png" alt="background" />
+              <div class="card__text">
+                <h2>EFFECTIVE ADVERTISING POINTERS.</h2>
+                <p>
+                  Having a home based business is a wonderful asset to your
+                  life...
+                </p>
+                <p>DOMINIC FREEMAN</p>
+                <h5>13 Dec 2019</h5>
+              </div>
+            </div>
+
+            <div class="forth-block__card">
+              <img src="./assets/forthBlock_slide3.png" alt="background" />
+              <div class="card__text">
+                <h2>HYPNOTIZE YOURSELF INTO THE GHOST.</h2>
+                <p>
+                  There are many things that are important to catalog design...
+                </p>
+                <p>ALICE WARD</p>
+                <h5>30 Nov 2019</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="forth-block__cardSlide">
+            <div class="forth-block__card">
+              <img src="./assets/forthBlock_slide1.jpg" alt="background" />
+              <div class="card__text">
+                <h2>SEE THE UNMATCHED BEAUTY OF THE GREAT.</h2>
+                <p>
+                  Free directories: directories are perfect for customers that
+                  are searching for...
+                </p>
+                <p>ALJA BRUN</p>
+                <h5>20 Jan 2020</h5>
+              </div>
+            </div>
+
+            <div class="forth-block__card">
+              <img src="./assets/forthBlock_slide2.png" alt="background" />
+              <div class="card__text">
+                <h2>EFFECTIVE ADVERTISING POINTERS.</h2>
+                <p>
+                  Having a home based business is a wonderful asset to your
+                  life...
+                </p>
+                <p>DOMINIC FREEMAN</p>
+                <h5>13 Dec 2019</h5>
+              </div>
+            </div>
+
+            <div class="forth-block__card">
+              <img src="./assets/forthBlock_slide3.png" alt="background" />
+              <div class="card__text">
+                <h2>HYPNOTIZE YOURSELF INTO THE GHOST.</h2>
+                <p>
+                  There are many things that are important to catalog design...
+                </p>
+                <p>ALICE WARD</p>
+                <h5>30 Nov 2019</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+          <div class="forth-block__sidebar">
+            <button class="forth-block_dot" onclick="newSlide(1)"></button>
+            <button class="forth-block_dot" onclick="newSlide(2)"></button>
+            <button class="forth-block_dot" onclick="newSlide(3)"></button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./index.js"></script>
+    <script src="./indexforth.js"></script>
+  </body>
+</html>

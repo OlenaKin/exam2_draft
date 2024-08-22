@@ -1,0 +1,130 @@
+.main__forth-block{
+//position: relative;
+ max-width: 1600px;
+ width: 100%;
+ max-height: 978px;
+ height: 100%;
+ background-image: url(../assets/blokFour__background.jpg);
+ background-size: cover;
+ background-repeat: no-repeat;
+ border: 2px solid red;
+ padding-top: 150px;
+
+ .devision-white{
+    border: 1px solid rgba(255, 255, 255, 1);
+    width: 100px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+ }
+
+ h3{
+   font-size: $h3-font-size; 
+   font-family: $h3-font-family;
+   color: white;
+   text-transform: uppercase;
+   margin-bottom: 90px;
+ }
+ 
+ //color: salmon;
+.forth-block_mySlides{
+    position: relative;
+
+ .forth-block__cardSlide{
+    //position: absolute;    
+    //left: 120px;
+    display: flex;
+    flex-direction: row;
+    max-height: 514px;
+    height: 100%;
+    max-width: 1200px;
+    width: 100%;
+    gap: 30px;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid blue;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    //position: relative;        
+    height: 100%;
+    text-align: center;              
+        //border: 2px solid blue;
+    margin: 0 auto;
+    //width: auto;
+    //display: none;
+    
+    .forth-block__card{
+        //position: absolute;
+        max-height: 514px;
+        height: 100%;
+        max-width: 370px;
+        width: 100%;
+        text-align: left;
+        background-color: white;
+        //background-color: salmon;
+       
+
+
+        .card__text{
+            padding: 20px 20px 30px 20px;
+        }
+        
+        
+    }
+}
+
+ } 
+ .forth-block__sidebar {
+    width: 200px;        
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+    gap: 52px;
+    padding: 10px;
+    margin: 0 auto;
+    margin-top: auto;
+    border: 2px solid red;
+    position: relative;
+    
+    //border: 2px solid salmon;
+    //flex: 0.5;
+
+    
+    
+    .forth-block_dot {
+        //background-color: red;
+        border: none;
+        color: white;
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        &:hover{
+            transform: scale(1.5);
+    
+    
+}  
+    
+    
+}
+}
+}
+
+@media (min-width: 768px){
+
+    .main__forth-block{
+        height: 978px;
+
+        
+    }
+    
+}
+
+@media (max-width: 768px){
+
+    .main__forth-block{
+        height: auto;
+}
+}

@@ -1,0 +1,62 @@
+nav{
+    margin-left: auto;
+    //position: relative;
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    //margin-right: 4.37rem;
+    
+    .header__nav-list li::marker {
+        color: white; 
+        font-size: 23px;
+        align-items: center;
+    }
+
+    .header__nav-list{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;                         
+            width: 100%;
+            list-style: circle;
+            
+            
+           .header__nav-listItem{
+            margin-right: 4.8rem;            
+            text-transform: uppercase;
+            float: left;
+            
+            .bullet-point{
+                height: 5px;
+                width: 5px;
+                border-radius: 50%;
+                background-color: white;
+            }
+
+            a{
+              text-decoration: none; 
+              color: white; 
+            }
+           }           
+            
+    }
+
+    .header__social-network{
+        display: flex;
+        align-items: center;
+        
+
+        .header__social-network-item{
+            margin-right: 11px;
+            cursor: pointer;
+        }
+    
+    }
+
+    
+  }
+      
+  .header__label-burger{
+    cursor: pointer;
+  }
+    
+   

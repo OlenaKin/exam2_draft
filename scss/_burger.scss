@@ -1,0 +1,25 @@
+.header__label-burger{
+    z-index: 1;
+}
+
+
+
+.header__burger-input{
+    display: none;
+}
+
+#check:checked ~ .header__nav-list {
+    transform: translateY(0);
+}
+
+    @media (min-width: 576px){
+        .header__label-burger{
+            display: none;
+        } 
+
+        
+    }
+
+
+
+    
