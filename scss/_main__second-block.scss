@@ -134,6 +134,12 @@
 
   @media (min-width: 768px){
 
+    section {
+        .second-block__header{
+            font-size: $h3-font-size; 
+        }
+    }
+
     .main__second-block{
         height: 26rem;
 
@@ -141,18 +147,19 @@
             padding-left: 70px;
             padding-top: 20px;
 
-        }
+        
 
         h1{
             margin-bottom: 20px;
             font-size: 80px;
         }
         h2{
-            font-size: 18px;
+            font-size: 44px;
         }
 
         h3{
             font-size: $h3-font-size;
+            
             
             
         }
@@ -160,6 +167,8 @@
         p{
             font-size: 18px;
         }
+
+    }
     }
     
 }
