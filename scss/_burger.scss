@@ -9,7 +9,12 @@
 }
 
 #check:checked ~ .header__nav-list {
-    transform: translateY(0);
+    transform: translateY(0);   
+    transform: translateX(-100%); 
+    background-color: rgba(126, 90, 255, 1);
+    width: 200px;
+    height: 400px;
+    
 }
 
     @media (min-width: 576px){

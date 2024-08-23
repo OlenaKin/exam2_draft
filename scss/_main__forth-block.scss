@@ -1,5 +1,5 @@
 .main__forth-block{
-//position: relative;
+
  max-width: 1600px;
  width: 100%;
  max-height: 978px;
@@ -7,8 +7,9 @@
  background-image: url(../assets/blokFour__background.jpg);
  background-size: cover;
  background-repeat: no-repeat;
- border: 2px solid red;
+ //border: 2px solid red;
  padding-top: 150px;
+ margin-bottom: 150px;
 
  .devision-white{
     border: 1px solid rgba(255, 255, 255, 1);
@@ -25,55 +26,63 @@
    margin-bottom: 90px;
  }
  
- //color: salmon;
+ 
 .forth-block_mySlides{
-    position: relative;
-
+    
+    margin: 0 auto;
+    height: 530px;
+   
+    max-width: 1250px;
+    width: 100%;
+    
+    
+    
  .forth-block__cardSlide{
-    //position: absolute;    
-    //left: 120px;
-    display: flex;
-    flex-direction: row;
-    max-height: 514px;
+    
+       
     height: 100%;
     max-width: 1200px;
-    width: 100%;
-    gap: 30px;
-    align-items: center;
+    width: 100%;    
     justify-content: space-between;
-    border: 2px solid blue;
+          
+    height: 100%;         
+    left: 23px;
     margin: 0 auto;
-    margin-bottom: 50px;
-    //position: relative;        
-    height: 100%;
-    text-align: center;              
-        //border: 2px solid blue;
-    margin: 0 auto;
-    //width: auto;
-    //display: none;
+    transition: transform 0.5s ease-in-out;
+
     
-    .forth-block__card{
-        //position: absolute;
-        max-height: 514px;
-        height: 100%;
+    
+      .forth-block__card{
+        display: inline-block;
+        height: auto;
         max-width: 370px;
         width: 100%;
         text-align: left;
-        background-color: white;
-        //background-color: salmon;
-       
+        margin-right: 20px;
+        background-color: rgb(255, 255, 255, 1);
+        
+        
+        
 
 
         .card__text{
             padding: 20px 20px 30px 20px;
+
+            p{
+               font-family: $p-font-family; 
+               font-size: $p-font-size;
+               padding-bottom: 20px;
+            }
         }
         
         
     }
 }
+}
 
- } 
- .forth-block__sidebar {
+
+  
+ .sidebar {
     width: 200px;        
     color: white;
     display: flex;
@@ -84,11 +93,10 @@
     padding: 10px;
     margin: 0 auto;
     margin-top: auto;
-    border: 2px solid red;
+    //border: 2px solid red;
     position: relative;
     
-    //border: 2px solid salmon;
-    //flex: 0.5;
+    
 
     
     
@@ -102,7 +110,7 @@
         cursor: pointer;
         transition: background-color 0.3s;
         &:hover{
-            transform: scale(1.5);
+            transform: scale(1.5);}
     
     
 }  
@@ -110,7 +118,8 @@
     
 }
 }
-}
+
+ 
 
 @media (min-width: 768px){
 

@@ -1,144 +1,230 @@
 "use strict";
 
 
-    
-/*let currentIndex = 0;
-const textBlocks = document.querySelectorAll(".text-block");
-const totalBlocks = textBlocks.length;
+/*
 
-function rotateTextBlocks() {
-  textBlocks.forEach((block) => block.classList.remove("active"));
-  textBlocks[currentIndex].classList.add("active");
+let slideIndexes = { // Store slide indexes for both slide sets
+  mainSlides: 1,
+  forthSlides: 1
+};
+const time = 3000; // Time interval for automatic slide change
+
+// Function to show slides for a given set
+function showSlides(set, n) {
+  let i;
+  let slides;
+  let dots;
+
+  if (set === 'main') {
+    slides = document.getElementsByClassName("main__mySlides");
+    dots = document.getElementsByClassName("dot");
+  } else if (set === 'forth') {
+    slides = document.getElementsByClassName("forth-block__cardSlide");
+    dots = document.getElementsByClassName("forth-block_dot");
+  }
+
+  if (n > slides.length) { 
+    slideIndexes[`${set}Slides`] = 1; 
+  } 
+  if (n < 1) { 
+    slideIndexes[`${set}Slides`] = slides.length; 
+  }
+
+  // Hide all slides
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none"; 
+  }
+
+  // Remove the "active" class from all dots
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+
+  // Show the current slide and mark the corresponding dot as active
+  slides[slideIndexes[`${set}Slides`] - 1].style.display = "block"; 
+  if (dots[slideIndexes[`${set}Slides`] - 1]) {
+    dots[slideIndexes[`${set}Slides`] - 1].className += " active";
+  }
 }
 
-function showText(index) {
-  currentIndex = index;
-  rotateTextBlocks();
+// Function to change slides automatically for a given set
+function changeSlide(set) {
+  slideIndexes[`${set}Slides`]++;
+  showSlides(set, slideIndexes[`${set}Slides`]);
 }
 
-// Initialize the first text block
-rotateTextBlocks();
-
-// Rotate text blocks every 4 seconds
-setInterval(() => {
-  currentIndex = (currentIndex + 1) % totalBlocks;
-  rotateTextBlocks();
-}, 4000);*/
-
-
-
-/*let i = 0;
-let images = [];
-let slideTime = 3000; // 3 seconds
-
-images[0] = 'background1.png';
-images[1] = 'background2.png';
-images[2] = 'background3.png';
-
-function changePicture() {
-    // Set the background image with the correct CSS syntax
-    document.body.style.backgroundImage = `url(${images[i]})`;
-
-    // Cycle through the images
-    if (i < images.length - 1) {
-        i++;
-    } else {
-        i = 0;
-    }
-
-    // Change the picture after slideTime milliseconds
-    setTimeout(changePicture, slideTime);
+// Function to handle next/previous controls for a given set
+function plusSlides(set, n) {
+  showSlides(set, slideIndexes[`${set}Slides`] += n);
 }
 
-window.onload = changePicture;*/
-
-/*let i = 0;
-let images = [];
-let slideTime = 3000; // 3 seconds
-
-// Define the paths to your images
-images[0] = 'background1.png';
-images[1] = 'background2.png';
-images[2] = 'background3.png';
-
-function changePicture() {
-    // Set the background with both the gradient and the image
-    document.body.style.backgroundImage = `
-        linear-gradient(
-            to bottom, 
-            rgba(126, 90, 255, 1), 
-            rgba(85, 183, 255, 1)
-        ), 
-        url(${images[i]})
-    `;
-    document.body.style.backgroundSize = 'cover';
-    document.body.style.backgroundPosition = 'center';
-
-    // Cycle through the images
-    if (i < images.length - 1) {
-        i++;
-    } else {
-        i = 0;
-    }
-
-    // Change the picture after slideTime milliseconds
-    setTimeout(changePicture, slideTime);
+// Function to navigate to a specific slide for a given set
+function currentSlide(set, n) {
+  slideIndexes[`${set}Slides`] = n;
+  showSlides(set, slideIndexes[`${set}Slides`]);
 }
 
-window.onload = changePicture;*/
+// Start by showing the first slide for both sets
+showSlides('main', slideIndexes.mainSlides);
+showSlides('forth', slideIndexes.forthSlides);
 
-/*document.addEventListener('DOMContentLoaded', function () {
-    let currentIndex = 0;
-    const textBlocks = document.querySelectorAll('.text-block');
-    const totalBlocks = textBlocks.length;
+// Set the automatic slide change intervals for both sets
+setInterval(() => changeSlide('main'), time);
+setInterval(() => changeSlide('forth'), time);*/
 
-    function rotateTextBlocks() {
-        textBlocks.forEach(block => block.classList.remove('active'));
-        textBlocks[currentIndex].classList.add('active');
-    }
 
-    function showText(index) {
-        currentIndex = index;
-        rotateTextBlocks();
-    }
 
-    // Initialize the first text block
-    rotateTextBlocks();
 
-    // Rotate text blocks every 4 seconds
-    setInterval(() => {
-        currentIndex = (currentIndex + 1) % totalBlocks;
-        rotateTextBlocks();
-    }, 4000);
+let slideIndexes = { 
+  mainSlides: 1,
+  forthSlides: 1
+};
+const time = 4000; 
+
+function showSlides(set, n) {
+  let i;
+  let slides;
+  let dots;
+
+  if (set === 'main') {
+    slides = document.getElementsByClassName("main__mySlides");
+    dots = document.getElementsByClassName("dot");
+  } else if (set === 'forth') {
+    slides = document.getElementsByClassName("forth-block__cardSlide");
+    dots = document.getElementsByClassName("forth-block_dot");
+  }
+
+  if (n > slides.length) { 
+    slideIndexes[`${set}Slides`] = 1; 
+  } 
+  if (n < 1) { 
+    slideIndexes[`${set}Slides`] = slides.length; 
+  }
+
+  
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none"; 
+  }
+
+ 
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+
+ 
+  slides[slideIndexes[`${set}Slides`] - 1].style.display = "block"; 
+  if (dots[slideIndexes[`${set}Slides`] - 1]) {
+    dots[slideIndexes[`${set}Slides`] - 1].className += " active";
+  }
+}
+
+
+function changeSlide(set) {
+  slideIndexes[`${set}Slides`]++;
+  showSlides(set, slideIndexes[`${set}Slides`]);
+}
+
+
+function plusSlides(set, n) {
+  showSlides(set, slideIndexes[`${set}Slides`] += n);
+}
+
+
+function currentSlide(set, n) {
+  slideIndexes[`${set}Slides`] = n;
+  showSlides(set, slideIndexes[`${set}Slides`]);
+}
+
+
+showSlides('main', slideIndexes.mainSlides);
+showSlides('forth', slideIndexes.forthSlides);
+
+
+setInterval(() => changeSlide('main'), time);
+setInterval(() => changeSlide('forth'), time);
+
+
+
+
+
+//Form 
+
+
+
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent form submission
+  
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+
+  // Simple validation
+  if (name === "" || email === "") {
+      alert("Please fill in all fields.");
+      return;
+  }
+
+  // Here you can add code to submit the form data using an AJAX request or just display a success message
+  alert(`Thank you, ${name}! Your message has been sent.`);
+  
+  // Optionally, reset the form
+  this.reset();
+});
+
+
+
+
+//Burger
+
+/*const windowElement = document.getElementById("myWindow");
+const button = document.getElementById("openWindowBtn");
+
+function toggleModal() {
+  if (windowElement.style.display === "block") {
+    windowElement.style.display = "none";
+    button.textContent = "Open Window";
+  } else {
+    windowElement.style.display = "block";
+    button.textContent = "Close Window";
+  }
+}
+
+button.addEventListener("click", toggleModal);
+
+windowElement.addEventListener("click", function (event) {
+  if (event.target === windowElement) {
+    toggleModal();
+  }
 });*/
 
+const burgerMenu = document.getElementById("burgerMenu");
+const burgerButton = document.getElementById("burgerButton");
+const burgerToggle = document.getElementById("burgerToggle");
 
-
-let slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+function toggleBurgerMenu() {
+  if (burgerToggle.checked) {
+    burgerMenu.style.transform = "translateY(0)"; // Bring menu into view
+    burgerButton.textContent = "✖"; // Change to 'close' icon
+  } else {
+    burgerMenu.style.transform = "translateY(-100%)"; // Hide menu
+    burgerButton.textContent = "☰"; // Change to 'burger' icon
+  }
 }
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+burgerButton.addEventListener("click", function() {
+  burgerToggle.checked = !burgerToggle.checked; // Toggle checkbox state
+  toggleBurgerMenu(); // Call the toggle function
+});
 
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("main__mySlides","forth-block__cardSlide");
-  let dots = document.getElementsByClassName("dot","forth-block_dot");
-  if (n > slides.length) {slideIndex = 1} 
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none"; 
-    }
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
-  slides[slideIndex-1].style.display = "block"; 
-  dots[slideIndex-1].className += " active";
-}
+burgerMenu.addEventListener("click", function(event) {
+  if (event.target === burgerMenu) {
+    burgerToggle.checked = false; // Close menu if click outside menu items
+    toggleBurgerMenu(); // Call the toggle function
+  }
+});
+
+
+
+
+
 
 

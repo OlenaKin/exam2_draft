@@ -8,6 +8,8 @@
     display: flex;
     left: 0;
     margin-bottom: 120px;
+
+    
     
     
    
@@ -68,8 +70,7 @@
             max-height: 350px;
             height: 100%;
             //border: 2px solid pink;
-            padding-left: 70px;
-            padding-top: 20px;
+            
             
             h2{
                 font-size: $h2-font-family;
@@ -82,7 +83,8 @@
               }
               h3{
                   font-weight: 700; 
-                  font-size: $h3-font-size;
+                  //font-size: $h3-font-size;
+                  color: rgba(44, 64, 88, 1);
                   text-transform: uppercase; 
                   line-height: 53.6px;
                   margin-bottom: 19px;
@@ -92,7 +94,7 @@
               p{
                 font-weight: 400;
                 line-height: 30px;  
-                font-size: 18px;
+                
                 margin-bottom: 40px;
               }
 
@@ -108,4 +110,104 @@
 
        
     }
+}
+.devision-black{
+    border: 1px solid rgba(44, 64, 88, 1);
+    width: 100px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+/*h3{
+    font-size: $h3-font-size; 
+    font-family: $h3-font-family;
+    color: rgba(44, 64, 88, 1);
+    text-transform: uppercase;
+    margin-bottom: 90px;
+  }*/
+
+
+
+
+ 
+
+
+  @media (min-width: 768px){
+
+    .main__second-block{
+        height: 26rem;
+
+        .second-block__text{
+            padding-left: 70px;
+            padding-top: 20px;
+
+        }
+
+        h1{
+            margin-bottom: 20px;
+            font-size: 80px;
+        }
+        h2{
+            font-size: 18px;
+        }
+
+        h3{
+            font-size: $h3-font-size;
+            
+            
+        }
+
+        p{
+            font-size: 18px;
+        }
+    }
+    
+}
+
+@media (max-width: 768px){
+
+    .main__second-block{
+        height: auto;
+        flex-direction: column;
+
+        .second-block__photoArea{
+            background-image: none;
+
+            .second-block__photo{
+            
+                margin-top: 0; 
+                margin-left: 0;    
+        }
+
+        .sidebar{
+            display: none;
+        }
+
+        .second-block__text{
+
+            padding: 5px;
+            h1{
+                font-size: 26px;
+                
+            }
+    
+            h2{
+                font-size: 14px; 
+            }
+    
+            h3{
+                font-size: 18px; 
+                margin-bottom: 5px;
+            }
+            
+    
+            p{
+                font-size: 14px;
+            }
+
+        }
+
+        
+}
+}
 }

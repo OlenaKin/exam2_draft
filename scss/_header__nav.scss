@@ -1,10 +1,11 @@
 nav{
     margin-left: auto;
-    //position: relative;
+    position: relative;
     display: flex;
     flex-direction: row;
     white-space: nowrap;
-    //margin-right: 4.37rem;
+    
+    
     
     .header__nav-list li::marker {
         color: white; 
@@ -18,18 +19,27 @@ nav{
             align-items: center;                         
             width: 100%;
             list-style: circle;
+
+
+            
             
             
            .header__nav-listItem{
             margin-right: 4.8rem;            
             text-transform: uppercase;
             float: left;
+
+            .header__nav-list li::marker {
+              color: white; 
+              font-size: 23px;
+              align-items: center;
+          }
             
             .bullet-point{
                 height: 5px;
                 width: 5px;
                 border-radius: 50%;
-                background-color: white;
+                //background-color: rgb(185, 66, 66);
             }
 
             a{
@@ -58,5 +68,60 @@ nav{
   .header__label-burger{
     cursor: pointer;
   }
+
+
+
+  @media (max-width: 576px){
+    .header__container{
+
+        a .header__logo{
+            height: 22px;
+        }
+
+        .header__label-burger{ 
+            display: block;
+            cursor: pointer;
+        }
+    }
+
     
+
    
+    .header__nav-list,
+    .header__social-network{
+      
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;        
+        height: 330px;
+        padding: 30px 8px;
+        top: 0;
+        margin-top: 7px;       
+       
+        //list-style: none;  
+        position: absolute;   
+        //width: 100%;
+        transform: translateY(-150%);
+        transition: transform 0.3s ease;
+        z-index: 500;
+        background-color: rgba(126, 90, 255, 1);
+        
+    }
+    
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
