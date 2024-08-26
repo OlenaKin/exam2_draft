@@ -231,14 +231,13 @@ main {
   color: black;
   display: flex;
   left: 0;
-  margin-bottom: 120px;
+  margin-bottom: 200px;
 }
 .main__second-block .second-block__photoArea {
   background-image: url(../assets/Rectangle\ 3.png);
   background-repeat: no-repeat;
   background-size: auto;
   flex: 1;
-  overflow: hidden;
 }
 .main__second-block .second-block__photoArea .second-block__blueSquare {
   /*background-color: rgba(85, 183, 255, 1);*/
@@ -302,6 +301,9 @@ main {
     margin-bottom: 90px;
   }*/
 @media (min-width: 768px) {
+  section .second-block__header {
+    font-size: 44px;
+  }
   .main__second-block {
     height: 26rem;
   }
@@ -309,17 +311,17 @@ main {
     padding-left: 70px;
     padding-top: 20px;
   }
-  .main__second-block h1 {
+  .main__second-block .second-block__text h1 {
     margin-bottom: 20px;
     font-size: 80px;
   }
-  .main__second-block h2 {
-    font-size: 18px;
-  }
-  .main__second-block h3 {
+  .main__second-block .second-block__text h2 {
     font-size: 44px;
   }
-  .main__second-block p {
+  .main__second-block .second-block__text h3 {
+    font-size: 44px;
+  }
+  .main__second-block .second-block__text p {
     font-size: 18px;
   }
 }
@@ -362,7 +364,7 @@ main {
   color: black;
   display: flex;
   left: 0;
-  margin-bottom: 120px;
+  margin-bottom: 200px;
 }
 .main__third-block .third-block__photoArea {
   background-image: url(../assets/Rectangle-purpl.png);
@@ -370,7 +372,6 @@ main {
   background-size: auto;
   background-position: top right;
   flex: 1;
-  overflow: hidden;
 }
 .main__third-block .third-block__photoArea .third-block__photo {
   margin-top: 57px;
