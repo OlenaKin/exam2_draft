@@ -3,7 +3,7 @@
     width: auto;
     max-height: 527px;
     height: 100%;   
-    color: black;
+    color: rgba(44, 64, 88, 1);  
     display: flex;
     left: 0;
     margin-bottom: 200px;
@@ -64,7 +64,7 @@
             h2{
                 //font-size: $h2-font-family;
                 font-weight: 400;
-                //color: red;
+                color: rgba(44, 64, 88, 1);  
                 text-transform: uppercase;
                 line-height: 26.8px;
                 margin-bottom: 10px;
@@ -117,7 +117,7 @@
             font-size: 80px;
         }
         h2{
-            font-size: 18px;
+            font-size: 22px;
         }
 
         h3{

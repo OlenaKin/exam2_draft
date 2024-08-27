@@ -259,6 +259,7 @@ main {
 @media (max-width: 768px) {
   .main__first-block {
     height: auto;
+    width: auto;
   }
   .main__first-block .sidebar {
     display: none;
@@ -277,7 +278,6 @@ main {
   color: black;
   display: flex;
   left: 0;
-  margin-bottom: 200px;
 }
 .main__second-block .second-block__photoArea {
   background-image: url(../assets/Rectangle\ 3.png);
@@ -285,12 +285,11 @@ main {
   background-size: auto;
   flex: 1;
 }
-.main__second-block .second-block__photoArea .second-block__blueSquare {
-  /*background-color: rgba(85, 183, 255, 1);*/
-}
 .main__second-block .second-block__photoArea .second-block__photo {
   margin-top: 57px;
   margin-left: 80px;
+  max-width: 630px;
+  width: 100%;
 }
 .main__second-block .second-block__textArea {
   text-align: left;
@@ -306,7 +305,6 @@ main {
   height: 100%;
 }
 .main__second-block .second-block__textArea .second-block__text h2 {
-  font-size: "Montserrat", sans-serif;
   font-weight: 400;
   text-transform: uppercase;
   line-height: 26.8px;
@@ -319,6 +317,9 @@ main {
   line-height: 53.6px;
   margin-bottom: 19px;
 }
+.main__second-block .second-block__textArea .second-block__text h4 {
+  color: rgb(44, 64, 88);
+}
 .main__second-block .second-block__textArea .second-block__text p {
   font-weight: 400;
   line-height: 30px;
@@ -329,7 +330,6 @@ main {
   height: 100%;
   max-width: 190px;
   width: 100%;
-  margin-bottom: 60px;
 }
 
 .devision-black {
@@ -339,19 +339,10 @@ main {
   margin-bottom: 30px;
 }
 
-/*h3{
-    font-size: $h3-font-size; 
-    font-family: $h3-font-family;
-    color: rgba(44, 64, 88, 1);
-    text-transform: uppercase;
-    margin-bottom: 90px;
-  }*/
 @media (min-width: 768px) {
-  section .second-block__header {
-    font-size: 44px;
-  }
   .main__second-block {
     height: 26rem;
+    margin-bottom: 200px;
   }
   .main__second-block .second-block__text {
     padding-left: 70px;
@@ -362,7 +353,8 @@ main {
     font-size: 80px;
   }
   .main__second-block .second-block__text h2 {
-    font-size: 44px;
+    font-size: 22px;
+    color: rgb(44, 64, 88);
   }
   .main__second-block .second-block__text h3 {
     font-size: 44px;
@@ -370,11 +362,15 @@ main {
   .main__second-block .second-block__text p {
     font-size: 18px;
   }
+  .main__second-block .second-block__text .main__more-detail-button {
+    margin-bottom: 60px;
+  }
 }
 @media (max-width: 768px) {
   .main__second-block {
     height: auto;
     flex-direction: column;
+    margin-bottom: 50px;
   }
   .main__second-block .second-block__photoArea {
     background-image: none;
@@ -382,32 +378,34 @@ main {
   .main__second-block .second-block__photoArea .second-block__photo {
     margin-top: 0;
     margin-left: 0;
-  }
-  .main__second-block .second-block__photoArea .sidebar {
     display: none;
   }
-  .main__second-block .second-block__photoArea .second-block__text {
-    padding: 5px;
-  }
-  .main__second-block .second-block__photoArea .second-block__text h1 {
-    font-size: 26px;
-  }
-  .main__second-block .second-block__photoArea .second-block__text h2 {
-    font-size: 14px;
-  }
-  .main__second-block .second-block__photoArea .second-block__text h3 {
-    font-size: 18px;
-    margin-bottom: 5px;
-  }
-  .main__second-block .second-block__photoArea .second-block__text p {
-    font-size: 14px;
-  }
 }
+.second-block__text {
+  padding: 5px;
+}
+.second-block__text h1 {
+  font-size: 26px;
+}
+.second-block__text h2 {
+  font-size: 14px;
+}
+.second-block__text h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.second-block__text p {
+  font-size: 14px;
+}
+.second-block__text .main__more-detail-button {
+  margin-bottom: 15px;
+}
+
 .main__third-block {
   width: auto;
   max-height: 527px;
   height: 100%;
-  color: black;
+  color: rgb(44, 64, 88);
   display: flex;
   left: 0;
   margin-bottom: 200px;
@@ -438,6 +436,7 @@ main {
 }
 .main__third-block .third-block__textArea .third-block__text h2 {
   font-weight: 400;
+  color: rgb(44, 64, 88);
   text-transform: uppercase;
   line-height: 26.8px;
   margin-bottom: 10px;
@@ -474,7 +473,7 @@ main {
     font-size: 80px;
   }
   .main__third-block h2 {
-    font-size: 18px;
+    font-size: 22px;
   }
   .main__third-block h3 {
     font-size: 44px;
