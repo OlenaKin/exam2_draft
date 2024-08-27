@@ -129,6 +129,45 @@ main {
   height: 400px;
 }
 
+/*.burger-menu {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+    cursor: pointer;
+    .burger-icon {
+      width: 30px;
+      height: 3px;
+      background-color: #000;
+      position: relative;
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        left: 0;
+        transition: transform 0.3s ease;
+      }
+      &::before {
+        top: -10px;
+      }
+      &::after {
+        top: 10px;
+      }
+    }
+  }
+
+  .burger-menu.active .burger-icon {
+    background-color: transparent;
+    &::before {
+      transform: translateY(10px) rotate(45deg);
+    }
+    &::after {
+      transform: translateY(-10px) rotate(-45deg);
+    }
+  }*/
 @media (min-width: 576px) {
   .header__label-burger {
     display: none;
@@ -146,7 +185,8 @@ main {
   max-height: 430px;
   height: 100%;
   margin: 0 auto;
-  margin-bottom: 180px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
 }
 .main__first-block .main__text-slider {
   position: relative;
@@ -196,6 +236,12 @@ main {
 }
 .main__first-block .sidebar button:hover {
   transform: scale(1.5);
+}
+.main__first-block .moving-button {
+  height: 40px;
+  width: 40px;
+  margin: 0 auto;
+  border: 2px solid green;
 }
 
 @media (min-width: 768px) {
@@ -754,6 +800,22 @@ button {
   text-transform: uppercase;
 }
 
+.moving-button {
+  margin: 0 auto;
+  margin-bottom: 170px;
+  cursor: pointer;
+  position: relative;
+  animation: moveUpDown 0.5s infinite alternate ease-in-out; /* Move every 1 second */
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0); /* Start at the original position */
+  }
+  100% {
+    transform: translateY(0.3cm); /* Move down by 0.5 cm */
+  }
+}
 button:hover {
   cursor: pointer;
 }
