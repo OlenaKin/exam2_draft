@@ -36,6 +36,23 @@ button{
     text-transform: uppercase;
 }
 
+.moving-button{
+    margin: 0 auto; 
+    margin-bottom: 170px;
+    cursor: pointer;
+  position: relative;
+  animation: moveUpDown 0.5s infinite alternate ease-in-out; /* Move every 1 second */
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0); /* Start at the original position */
+  }
+  100% {
+    transform: translateY(0.3cm); /* Move down by 0.5 cm */
+  }
+}
+
 button:hover{
     cursor: pointer;
     

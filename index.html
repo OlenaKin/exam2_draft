@@ -26,7 +26,7 @@
       rel="icon"
       type="image/x-icon"
       sizes="16x16"
-      href="./assets/favicons.ico"
+      href="./favicons.ico"
     />
   </head>
   <body>
@@ -99,19 +99,21 @@
             <button class="dot" onclick="currentSlide('main', 1)"></button>
             <button class="dot" onclick="currentSlide('main', 2)"></button>
             <button class="dot" onclick="currentSlide('main', 3)"></button>
-          </div>
+          </div>          
         </div>
+        
       </section>
+      <img class="moving-button" src="./assets/Arrow.svg" alt="button" id="scrollButton"><!--style="margin: 0 auto; margin-bottom: 170px;"-->
+      <section id="targetSection">
 
-      <section>
         <div class="devision-black"></div>
-        <h3>What we do</h3>
+        <h3 class="second-block__header" style = "font-size:44px; margin-bottom: 90px;">What we do</h3>
         <div class="main__second-block">
           
           <div class="second-block__photoArea">
             <div class="second-block__blueSquare"></div>
             <div class="second-block__photo">
-              <img src="./assets/joel-filipe-151697 1.png" alt="architecture" />
+              <img src="./assets/joel-filipe-151697 1.png " alt="architecture" class="picture"/>
             </div>
           </div>
           <div class="second-block__textArea">
@@ -308,19 +310,19 @@
           <h3>Gallery</h3>
           <div class="main__grid-container">
             <div class="grid-item1">
-              <img src="./assets/gallery1.svg" alt="gallery" />
+              <img class="zoom" src="./assets/gallery1.svg" alt="gallery"  />
             </div>
             <div class="grid-item2">
-              <img src="./assets/gallery2.svg" alt="gallery" />
+              <img class="zoom" src="./assets/gallery2.svg" alt="gallery" />
             </div>
             <div class="grid-item3">
-              <img src="./assets/gallery3.svg" alt="gallery" />
+              <img class="zoom" src="./assets/gallery3.svg" alt="gallery" />
             </div>
             <div class="grid-item4">
-              <img src="./assets/gallery4.svg" alt="gallery" />
+              <img class="zoom" src="./assets/gallery4.svg" alt="gallery" />
             </div>
             <div class="grid-item5">
-              <img src="./assets/gallery5.svg" alt="gallery" />
+              <img class="zoom" src="./assets/gallery5.svg" alt="gallery" />
             </div>
           </div>
           <button class="button_see-more">See more</button>
@@ -380,8 +382,10 @@
     <footer>
 
     </footer>
+    <!--<script src="./medium-zoom.min.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
 
-    <script src="./index.js"></script>
+    <script src="./index.js"></script>   
     
     
   </body>

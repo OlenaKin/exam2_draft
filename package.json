@@ -24,5 +24,8 @@
     "pre-commit": "^1.2.2",
     "sass": "^1.77.6",
     "w3c-html-validator": "^1.8.1"
+  },
+  "dependencies": {
+    "react-medium-image-zoom": "^5.2.8"
   }
 }

@@ -1,13 +1,14 @@
 .main__second-block{  
     
-    //position: absolute;
+   
     width: auto;
     max-height: 527px;
     height: 100%;   
     color: black;
     display: flex;
     left: 0;
-    margin-bottom: 120px;
+    
+    //position: relative;
 
     
     
@@ -17,15 +18,15 @@
     .second-block__photoArea{
         background-image: url(../assets/Rectangle\ 3.png);
         background-repeat: no-repeat; 
-        background-size:auto;     
-        //border: 4px solid blue;
+        background-size:auto;         
         //border: 3px solid violet;
         flex: 1;
-        overflow: hidden;
+        
+        
 
         .second-block__blueSquare{                  
             
-            /*background-color: rgba(85, 183, 255, 1);*/
+            
             
                    
                     
@@ -36,9 +37,13 @@
             
             margin-top: 57px; 
             margin-left: 80px;                      
-            //max-width: 630px;
+            max-width: 630px;
             //width: 100%;            
-            //height: 100%;
+            //height: auto;
+            width: 100%;
+            
+    //padding-bottom: 40%;
+                
             
             
             
@@ -73,12 +78,12 @@
             
             
             h2{
-                font-size: $h2-font-family;
-                font-weight: 400;
-                //color: red;
+                
+                font-weight: 400;                
                 text-transform: uppercase;
                 line-height: 26.8px;
                 margin-bottom: 10px;
+                
                   
               }
               h3{
@@ -89,7 +94,9 @@
                   line-height: 53.6px;
                   margin-bottom: 19px;
               }
-              h4{}
+              h4{
+                color: rgba(44, 64, 88, 1);  
+              }
       
               p{
                 font-weight: 400;
@@ -103,7 +110,8 @@
                 height: 100%;
                 max-width: 190px;
                 width: 100%;
-                margin-bottom: 60px;
+                //margin-bottom: 60px;
+                
              } 
       
         }
@@ -118,13 +126,7 @@
     margin-bottom: 30px;
 }
 
-/*h3{
-    font-size: $h3-font-size; 
-    font-family: $h3-font-family;
-    color: rgba(44, 64, 88, 1);
-    text-transform: uppercase;
-    margin-bottom: 90px;
-  }*/
+
 
 
 
@@ -134,25 +136,32 @@
 
   @media (min-width: 768px){
 
+    
+
     .main__second-block{
         height: 26rem;
+        margin-bottom: 200px;
+
+       
 
         .second-block__text{
             padding-left: 70px;
             padding-top: 20px;
 
-        }
+        
 
         h1{
             margin-bottom: 20px;
             font-size: 80px;
         }
         h2{
-            font-size: 18px;
+            font-size: 22px;
+            color: rgba(44, 64, 88, 1);  
         }
 
         h3{
-            font-size: $h3-font-size;
+            font-size: 44px;
+            
             
             
         }
@@ -160,28 +169,44 @@
         p{
             font-size: 18px;
         }
+
+        .main__more-detail-button{
+            margin-bottom: 60px;
+
+        }
+
     }
-    
+    }
 }
+    
+
 
 @media (max-width: 768px){
 
     .main__second-block{
         height: auto;
         flex-direction: column;
+        margin-bottom: 50px;
 
         .second-block__photoArea{
             background-image: none;
 
+           
+
             .second-block__photo{
-            
+                
                 margin-top: 0; 
-                margin-left: 0;    
+                margin-left: 0;  
+                display: none;  
         }
 
-        .sidebar{
-            display: none;
-        }
+
+    }
+}
+}
+
+
+      
 
         .second-block__text{
 
@@ -189,10 +214,12 @@
             h1{
                 font-size: 26px;
                 
+                
             }
     
             h2{
                 font-size: 14px; 
+               
             }
     
             h3{
@@ -203,11 +230,16 @@
     
             p{
                 font-size: 14px;
+               
             }
+
+            .main__more-detail-button{
+                margin-bottom: 15px;
+                
+            }
+
+           
 
         }
 
         
-}
-}
-}
